@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functional Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Functions, Arrays & Operators</p>
+        <h1>JavaScript Functional Demo</h1>
+        <p class="lede">
+          Explore map, filter, reduce, rest parameters, and spread operators
+          with interactive examples.
+        </p>
+        <div class="pill">
+          <span>map</span>
+          <span>filter</span>
+          <span>reduce</span>
+          <span>rest</span>
+          <span>spread</span>
+        </div>
+      </header>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Planner example</p>
+              <h2>Array iteration</h2>
+            </div>
+            <button class="ghost" id="reset-tasks">Reset tasks</button>
+          </div>
+
+          <div class="tasks" id="task-list"></div>
+
+          <form id="task-form" class="task-form">
+            <label class="field">
+              <span>Task title</span>
+              <input id="task-title" name="title" placeholder="Write documentation" required />
+            </label>
+            <label class="field">
+              <span>Duration (minutes)</span>
+              <input
+                id="task-duration"
+                name="duration"
+                type="number"
+                min="1"
+                step="1"
+                placeholder="30"
+                required
+              />
+            </label>
+            <label class="checkbox">
+              <input id="task-completed" name="completed" type="checkbox" />
+              <span>Completed</span>
+            </label>
+            <button type="submit">Add task</button>
+          </form>
+
+          <div class="stats">
+            <div class="stat">
+              <p class="label">Durations in seconds (map)</p>
+              <div class="chip" id="duration-seconds"></div>
+            </div>
+            <div class="stat">
+              <p class="label">Tasks ≥ 30 mins (filter)</p>
+              <div class="chip" id="filtered-tasks"></div>
+            </div>
+            <div class="stat total">
+              <p class="label">Total time (reduce)</p>
+              <p class="value" id="total-time"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Rest & Spread</p>
+              <h2>Dynamic inputs</h2>
+            </div>
+          </div>
+
+          <div class="rest-spread">
+            <section>
+              <div class="section-title">
+                <h3>Rest parameter</h3>
+                <p>Add as many numbers as you like.</p>
+              </div>
+              <form id="sum-form" class="sum-form">
+                <label class="field">
+                  <span>Add number</span>
+                  <input id="sum-input" type="number" step="1" placeholder="42" />
+                </label>
+                <button type="submit">Add to list</button>
+                <button type="button" class="ghost" id="clear-sum">Clear</button>
+              </form>
+              <div class="tags" id="sum-list"></div>
+              <p class="value" id="sum-result"></p>
+            </section>
+
+            <section>
+              <div class="section-title">
+                <h3>Spread operator</h3>
+                <p>Combine arrays and objects instantly.</p>
+              </div>
+              <div class="spread-output">
+                <div>
+                  <p class="label">Combined array</p>
+                  <pre id="combined-array"></pre>
+                </div>
+                <div>
+                  <p class="label">Merged product</p>
+                  <pre id="merged-object"></pre>
+                </div>
+              </div>
+              <button id="shuffle-spread" class="ghost">Shuffle arrays</button>
+            </section>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
